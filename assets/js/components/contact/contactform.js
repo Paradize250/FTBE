@@ -76,7 +76,15 @@ export default function ContactForm() {
             const contentType = response.headers.get('content-type');
             if (contentType && contentType.includes('application/json')) {
                 const data = await response.json();
+                
                 if (response.ok) {
+                    setFormData({ // Reset the form data to initial state
+                        firstName: '',
+                        lastName: '',
+                        email: '',
+                        phoneNumber: '',
+                        message: '',
+                    });
                     alert('Your message has been successfully sent!');
                 } else {
                     alert(`Error: ${data.message}`);
