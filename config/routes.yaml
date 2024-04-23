@@ -1,0 +1,30 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+    # config/routes.yaml
+
+ftbe:
+    path: /
+    controller: App\Controller\FtbeController::index
+
+outil:
+    path: /outil
+    controller: App\Controller\OutilController::index
+
+equipe:
+    path: /equipe
+    controller: App\Controller\EquipeController::index
+
+contact:
+    path: /contact
+    controller: App\Controller\ContactController::index
+
+savoir:
+    path: /savoir
+    controller: App\Controller\SavoirController::index
+
+reference:
+    path: /reference
+    controller: App\Controller\ReferenceController::index
